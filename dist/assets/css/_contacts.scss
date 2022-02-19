@@ -1,7 +1,15 @@
-
+@import './mixins';
 
 .contact-us{
     padding:4rem 2rem;
+    .contact-us-direct{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding-top: 1rem;
+        max-width: 600px;
+        margin: 0 auto;
+        min-height: 12vh;
+    }
     .header-heading{
         min-height: 20vh;
         display: flex;
@@ -11,12 +19,13 @@
         background-color: $dark-bg;
         color: $main-text-color;
         width: 100%;
+        text-align: center;
+        p{
+            padding: 1rem 1.2rem
+        }
     }
     .contact-info{
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      align-items: center;
-      gap: 3rem;
+     @include grid-layout(repeat(2,1fr));
 
       .form{
           .form-group{

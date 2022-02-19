@@ -10,9 +10,10 @@ body{
     scroll-behavior: smooth;
     font-family: 'Poppins', sans-serif;
     min-height: 100vh;
-    min-width: 100%;
+    min-width: 100vw;
     background-color: #f8fdfe;
     scroll-behavior: smooth;
+    
 }
 img{
     width: 100%;
@@ -26,3 +27,7 @@ a{
     color: rgb(253, 250, 250);
 }
 
+.p-hero{
+   
+    padding: 1rem 1.5rem;
+}

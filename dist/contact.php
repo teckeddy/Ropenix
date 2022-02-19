@@ -38,6 +38,23 @@
            </div>
 
         </div>
+        <div class="contact-us-direct">
+            <div class="vist-us">
+                <h2>Vist us</h2>
+                <p>Location</p>
+
+            </div>
+            <div class="email-us">
+              <h2>Email us</h2>
+              <p>email</p>
+
+            </div>
+            <div class="call-us">
+                <h2>Call us</h2>
+                <p>Number</p>
+
+            </div>
+        </div>
         
 
     </div>

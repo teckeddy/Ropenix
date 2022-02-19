@@ -74,7 +74,7 @@
     <h1 class="header-text">Our Services</h1>
     <div class="services-info">
         <div class="service service-1">
-            <img src="./assets/images/website.jpg" alt="" srcset="">
+            <img src="./assets/images/web.jpg" alt="" srcset="">
             <h1>Web and app development</h1>
             <p>get a responsive, scalable and a modern design website to market your business</p>
             <a href="#" class="secondary-btn">Learn more</a>

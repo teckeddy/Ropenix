@@ -61,7 +61,7 @@ body {
   scroll-behavior: smooth;
   font-family: 'Poppins', sans-serif;
   min-height: 100vh;
-  min-width: 100%;
+  min-width: 100vw;
   background-color: #f8fdfe;
   scroll-behavior: smooth;
 }
@@ -78,6 +78,10 @@ ul {
 a {
   text-decoration: none;
   color: #fdfafa;
+}
+
+.p-hero, .our-features-info .feature-info .feature-info-text {
+  padding: 1rem 1.5rem;
 }
 
 .navbar {
@@ -314,15 +318,15 @@ main {
           align-items: center;
   text-align: center;
   padding: 1rem 3rem;
+  width: 100%;
 }
 
 .banner-info {
   border: 2px dashed #356483;
-  padding: 1rem;
 }
 
 .banner-info .banner-header {
-  font-size: 2.3rem;
+  font-size: 1.5rem;
   font-family: 'Roboto', sans-serif;
   padding: 1rem;
 }
@@ -331,15 +335,14 @@ main {
   min-height: 70vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
 }
 
@@ -413,15 +416,16 @@ main {
 .our-services .services-header .services-info {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  display: grid;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
   text-align: center;
 }
 
@@ -493,7 +497,6 @@ main {
   color: #f6fdfe;
   padding: 1rem 1rem;
   text-align: center;
-  position: fixed;
   bottom: 0;
   width: 100%;
   display: -ms-grid;
@@ -524,8 +527,40 @@ main {
   display: inline-block;
 }
 
+@media screen and (max-width: 900px) {
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .quick-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .contact-us {
   padding: 4rem 2rem;
+}
+
+.contact-us .contact-us-direct {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  padding-top: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  min-height: 12vh;
 }
 
 .contact-us .header-heading {
@@ -546,16 +581,24 @@ main {
   background-color: #0a0808;
   color: #f6fdfe;
   width: 100%;
+  text-align: center;
+}
+
+.contact-us .header-heading p {
+  padding: 1rem 1.2rem;
 }
 
 .contact-us .contact-info {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
 }
 
@@ -591,6 +634,374 @@ main {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+.secondary-btn {
+  background-color: #0a0808;
+  padding: .6rem 1rem;
+  width: 100%;
+  display: inline-block;
+  color: #f6fdfe;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  text-transform: uppercase;
+}
+
+.secondary-btn:focus {
+  outline: none;
+}
+
+.secondary-btn {
+  background-color: #ee3f11;
+  margin-top: 15px;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.secondary-btn:hover {
+  background-color: #0a0808;
+  color: #f6fdfe;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  border: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.p-hero, .our-features-info .feature-info .feature-info-text {
+  font-size: clamp(1rem, 5vw, 1.2rem);
+}
+
+main {
+  min-height: 100vh;
+  margin-top: 30px;
+  margin-bottom: 3rem;
+}
+
+.hero {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 12, 12, 0.8)), to(rgba(40, 109, 189, 0.8))), url("../images/hero.jpg");
+  background: linear-gradient(rgba(12, 12, 12, 0.8), rgba(40, 109, 189, 0.8)), url("../images/hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero .container {
+  height: 100%;
+}
+
+.hero .container .main-content {
+  min-height: 70vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1rem 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.hero .container .main-content .hero-heading {
+  color: #fff;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  padding: 1rem;
+}
+
+.hero .container .main-content .hero-heading span {
+  color: #ee3f11;
+}
+
+.hero .container .main-content h2 {
+  color: #e4f9fb;
+  font-size: clamp(1rem, 5vw, 4rem);
+  line-height: 1;
+}
+
+.hero .container .main-content p {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 5px;
+}
+
+.hero-banner {
+  background-color: #0a0808;
+  color: #f6fdfe;
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 1rem 3rem;
+  width: 100%;
+}
+
+.banner-info {
+  border: 2px dashed #356483;
+}
+
+.banner-info .banner-header {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  padding: 1rem;
+}
+
+.our-features-info {
+  min-height: 70vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.our-features-info .feature-info {
+  color: #f6fdfe;
+}
+
+.our-features-info .feature-info .info-index {
+  background-color: tomato;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 70px;
+  height: 70px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px auto;
+  font-size: 2rem;
+  font-weight: 900;
+  border-bottom-left-radius: 50%;
+}
+
+.our-features-info .feature-info .feature-info-header {
+  font-size: 2rem;
+  text-transform: capitalize;
+  height: 100%;
+  padding-bottom: 1rem;
+}
+
+.features {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 7, 10, 0.8)), to(rgba(13, 15, 17, 0.8))), url("../images/features.jpg");
+  background: linear-gradient(rgba(0, 7, 10, 0.8), rgba(13, 15, 17, 0.8)), url("../images/features.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.our-services {
+  min-height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 7, 10, 0.5)), to(rgba(13, 15, 17, 0.8))), url("../images/services.jpg");
+  background: linear-gradient(rgba(0, 7, 10, 0.5), rgba(13, 15, 17, 0.8)), url("../images/services.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #f6fdfe;
+}
+
+.our-services .services-header .header-text {
+  font-size: 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.our-services .services-header .services-info {
+  display: -ms-grid;
+  display: grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  text-align: center;
+}
+
+.our-services .services-header .services-info h1 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.our-services .services-header .services-info p {
+  padding: 1rem;
+  font-weight: 400;
+  color: #00070c;
+  background-color: #fcd9d0;
+  margin-top: 20px;
+}
+
+.our-services .services-header .services-info img {
+  width: 100%;
+  height: 200px;
+}
+
+.our-services .services-header .services-info img:hover {
+  opacity: 0.3;
+}
+
+.our-services .services-header .services-info .service {
+  outline: 1px solid #d6cece;
+}
+
+.our-services .services-header .services-info .service .service-btn {
+  padding: 0.5rem 1rem;
+  background-color: #fcd9d0;
+  display: inline-block;
+  margin-top: 10px;
+  color: #0a0808;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 960px) {
+  .our-features-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+  .our-services .services-header .services-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 1rem 3rem;
+  }
+  .our-services .services-header .services-info img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.about-us {
+  min-height: 60vh;
+  padding-top: 3rem;
+}
+
+.about-us .about-us-info {
+  min-height: 60vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.about-us .about-us-info h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  padding: 1rem;
+}
+
+.about-us .about-us-info .about-p {
+  font-size: clamp(0.8rem, 5vw, 1rem);
+  position: relative;
+  padding: 1rem;
+}
+
+form .newsletter-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+form .newsletter-form .form-control {
+  padding: .6rem 1rem;
+  margin-bottom: 1rem;
+  border: none;
+  background: transparent;
+  border: 1px solid #f6fdfe;
+  color: #f6fdfe;
+}
+
+form .newsletter-form .btn {
+  background-color: tomato;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  .about-us .about-us-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

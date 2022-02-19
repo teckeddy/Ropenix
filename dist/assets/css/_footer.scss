@@ -4,7 +4,7 @@
     color: $main-text-color;
     padding: 1rem 1rem;
     text-align: center;
-    position: fixed;
+
     bottom: 0;
     width: 100%;
     display: grid;
@@ -26,4 +26,14 @@
        }
     }
     
+}
+@media screen and (max-width: 900px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+        .quick-links{
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }

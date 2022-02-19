@@ -1,0 +1,58 @@
+@import './main';
+.about-us{
+    min-height: 60vh;
+    padding-top: 3rem;
+    .about-us-info{
+        min-height: 60vh;
+        @include grid-layout(repeat(2,1fr));
+        h1{
+            font-size: clamp(2rem , 5vw, 3rem);
+            padding: 1rem;
+        }
+        .about-p{
+            font-size: clamp(.8rem, 5vw, 1rem);
+            position: relative;
+            padding: 1rem;
+          
+        }
+    
+    }
+
+}
+form{
+
+    .newsletter-form{
+        display: flex;
+       
+        align-items: center;
+        justify-content: center;
+        .form-control{
+            padding: .6rem 1rem;
+            margin-bottom: 1rem;
+            border: none;
+            background: transparent;
+            border: 1px solid $main-text-color;
+            color: $main-text-color;
+            
+            
+        }
+       .btn{
+           background-color: tomato;
+           text-transform: uppercase;
+           margin-left: 20px;
+       }
+    }
+   
+
+}
+
+
+@media screen and (max-width:900px) {
+    .about-us{
+        .about-us-info{
+            display: flex;
+            flex-direction: column-reverse;
+            padding: 1rem;
+        }
+    }
+}

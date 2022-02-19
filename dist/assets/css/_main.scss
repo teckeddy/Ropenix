@@ -1,5 +1,6 @@
 @import './variables'; 
 @import './components/button';
+@import './mixins';
 .hero{
     background: linear-gradient(rgba(12, 12, 12, 0.8), rgba(40, 109, 189, 0.8)), url("../images/hero.jpg"); 
     background-position: center;
@@ -52,15 +53,16 @@
     align-items: center;
     text-align: center;
     padding: 1rem 3rem;
+    width: 100%;
     
     
 
 }
 .banner-info{
     border: 2px dashed rgb(53, 100, 131);
-    padding: 1rem;
+   
     .banner-header{
-        font-size: 2.3rem;
+        font-size: 1.5rem;
         font-family: 'Roboto', sans-serif;
         padding: 1rem;
     }
@@ -70,12 +72,7 @@
 // our qualities style
 .our-features-info{
     min-height: 70vh;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    gap: 3rem;
+   @include grid-layout(repeat(3,1fr));
 
     .feature-info{
         color: $main-text-color;
@@ -137,10 +134,7 @@
         
         .services-info{
             display: grid;
-            grid-template-columns: repeat(4,1fr);
-            justify-content: center;
-            align-items: flex-start;
-            gap: 2rem;
+           @include grid-layout(repeat(4,1fr));
             text-align: center;
             
             

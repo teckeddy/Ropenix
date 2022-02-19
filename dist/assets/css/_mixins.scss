@@ -1,0 +1,11 @@
+@mixin grid-layout($grid-template-column) {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: $grid-template-column;
+    gap: 3rem;
+
+    
+};
+// forms mixin
+
