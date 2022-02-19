@@ -1,0 +1,44 @@
+.secondary-btn{
+    background-color: $dark-bg;
+    padding: .6rem 1rem;
+    width: 100%;
+    display: inline-block;
+    color: $main-text-color;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    text-transform: uppercase;
+    &:focus{
+        outline: none;
+    }
+    
+}
+.secondary-btn{
+    background-color: $span-color;
+    margin-top: 15px;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    border-radius: 5px;
+    width: 200px;
+    &:hover{
+        background-color: $dark-bg;
+        color: $main-text-color;
+        transition: all .5s ease-in-out;
+        border: none;
+    }
+
+}
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+}
+.p-hero{
+    font-size: clamp(1rem, 5vw, 1.2rem);
+}
+main{
+    min-height: 100vh;
+    margin-top: 30px;
+    margin-bottom: 3rem;
+}

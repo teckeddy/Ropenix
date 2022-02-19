@@ -1,0 +1,208 @@
+@import './variables'; 
+@import './components/button';
+.hero{
+    background: linear-gradient(rgba(12, 12, 12, 0.8), rgba(40, 109, 189, 0.8)), url("../images/hero.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container{
+        height: 100%;
+        .main-content{
+            min-height:70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 3rem;
+            text-align: center;
+            position: relative;
+         .hero-heading{
+             color: #fff;
+             font-size: clamp(2rem, 5vw, 3.4rem);
+             padding: 1rem;
+             span{
+                 color: $span-color;
+             }
+         }
+         h2{
+             color: $header-color;
+             font-size: clamp(1rem, 5vw, 4rem);
+             line-height: 1;
+         }
+         p{
+             color: #fff;
+             font-size: 1.2rem;
+             padding: 10px 5px;
+         }
+        
+        
+        }
+       
+    }
+  
+}
+//hero banner style
+.hero-banner{
+    background-color: $dark-bg;
+    color: $main-text-color;
+    min-height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 3rem;
+    
+    
+
+}
+.banner-info{
+    border: 2px dashed rgb(53, 100, 131);
+    padding: 1rem;
+    .banner-header{
+        font-size: 2.3rem;
+        font-family: 'Roboto', sans-serif;
+        padding: 1rem;
+    }
+}
+
+// end of hero banner style
+// our qualities style
+.our-features-info{
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 3rem;
+
+    .feature-info{
+        color: $main-text-color;
+        
+        .info-index{
+            background-color: tomato;
+            display: inline-flex;
+            width: 70px;
+            height: 70px;
+            justify-content: center;
+            align-items: center;
+            margin: 20px auto;
+            font-size: 2rem;
+            font-weight: 900;
+            border-bottom-left-radius: 50%;
+        }
+        .feature-info-header{
+            font-size: 2rem;
+            text-transform: capitalize;
+            height: 100%;
+            padding-bottom: 1rem;
+        }
+        .feature-info-text{
+           @extend .p-hero;
+        }
+    }
+
+}
+.features{
+
+    background: linear-gradient(rgba(0, 7, 10, 0.8), rgba(13, 15, 17, 0.8)), url("../images/features.jpg"); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+// end of our qualities style
+
+// our services
+.our-services{
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 7, 10, 0.5), rgba(13, 15, 17, 0.8)), url("../images/services.jpg"); 
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $main-text-color;
+    
+    .services-header{
+        .header-text{
+            font-size: 2rem;
+            padding: 2rem;
+            text-align: center;
+        }
+            
+        
+        .services-info{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            justify-content: center;
+            align-items: flex-start;
+            gap: 2rem;
+            text-align: center;
+            
+            
+            h1{
+                font-size: 1.2rem;
+                text-transform: capitalize;
+               
+            }
+            p{
+                padding: 1rem;
+                font-weight: 400;
+                color: rgb(0, 7, 12);
+                background-color: #fcd9d0;
+                margin-top: 20px;
+            }
+            img{
+                width: 100%;
+                height: 200px;
+                &:hover{
+                    opacity: 0.3;
+                }
+            }
+            .service {
+        
+                outline: 1px solid rgb(214, 206, 206);
+                .service-btn{
+                    padding: 0.5rem 1rem;
+                    background-color: #fcd9d0;
+                    display: inline-block;
+                    margin-top: 10px;
+                    color: $dark-bg;
+                    text-transform: capitalize;
+                
+                }
+               
+              
+            }
+        }
+    }
+}
+// end of our services style
+// responsive mobile style
+@media screen and (max-width: 960px){
+    .our-features-info{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+    .our-services{
+
+        .services-header{
+            .services-info{
+                display: flex;
+                flex-direction: column;
+                padding: 1rem 3rem;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    
+}

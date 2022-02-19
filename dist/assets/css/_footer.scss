@@ -1,0 +1,29 @@
+@import './variables';
+.footer{
+    background-color: $light-dark-bg;
+    color: $main-text-color;
+    padding: 1rem 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    .quick-links{
+       display: flex;
+ 
+       .link{
+           background-color: $dark-bg;
+           color: $main-text-color;
+           padding: .5rem;
+           margin-left: 15px;
+           font-size: clamp(.8rem, 5vw , 1rem);
+           display: inline-block;
+       }
+    }
+    
+}

@@ -1,0 +1,28 @@
+@import './variables';
+@import './components/button';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    min-width: 100%;
+    background-color: #f8fdfe;
+    scroll-behavior: smooth;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(253, 250, 250);
+}
+
