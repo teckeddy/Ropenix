@@ -45,7 +45,21 @@ form{
    
 
 }
+.about-banner{
+    background-color: $dark-bg;
+    min-height: 20vh;
+    padding: 1rem;
+    .banner-info{
+        background-color: $main-text-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        img{
+            width: 200px;
+        }
+    }
+}
 
 @media screen and (max-width:900px) {
     .about-us{

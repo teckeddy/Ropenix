@@ -23,10 +23,9 @@
 
         </div>
     </section>
-    <section class="hero-banner">
+    <section class="about-banner">
     <div class="banner-info container">
-        <h1 class="banner-header">Join Our Newsletter</h1>
-        <p class="p-hero">Join our newsletter today and be notofied whenever new services comes , offers and promotions</p>
+        <img src="./assets/images/ro.png" alt="" srcset="">
     
     </div>
 </section>

@@ -3,22 +3,14 @@
 
 ?>
 <main>
-    <div class="container">
-        <div class="projects">
-            <div class="project">
-
-            </div>
-            <div class="project">
-
-            </div>
-            <div class="project">
-
-            </div>
-            <div class="project">
-
-            </div>
-        </div>
+    <div class="our-projects">
+    <h1>Projects | <a href="index.php">Home</a></h1>
+    <div class="projects container">
+       
     </div>
+
+    </div>
+   
 </main>
 
 <?php

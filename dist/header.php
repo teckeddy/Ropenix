@@ -18,7 +18,6 @@
         <ul class="main-nav">
             <li class="nav-items"><a href="index.php" class="nav-links">Home</a></li>
             <li class="nav-items"><a href="projects.php" class="nav-links">Projects</a></li>
-            <li class="nav-items"><a href="projects.php" class="nav-links">Portfolio</a></li>
             <li class="nav-items"><a href="about.php" class="nav-links">About</a></li>
             <li class="nav-items"><a href="contact.php" class="nav-links">contacts</a></li>
         </ul>

@@ -637,6 +637,11 @@ main {
   }
 }
 
+.our-projects {
+  background-color: #0a0808;
+  color: #f6fdfe;
+}
+
 .secondary-btn {
   background-color: #0a0808;
   padding: .6rem 1rem;
@@ -990,6 +995,29 @@ form .newsletter-form .btn {
   background-color: tomato;
   text-transform: uppercase;
   margin-left: 20px;
+}
+
+.about-banner {
+  background-color: #0a0808;
+  min-height: 20vh;
+  padding: 1rem;
+}
+
+.about-banner .banner-info {
+  background-color: #f6fdfe;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about-banner .banner-info img {
+  width: 200px;
 }
 
 @media screen and (max-width: 900px) {
